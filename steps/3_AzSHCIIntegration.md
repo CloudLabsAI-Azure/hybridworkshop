@@ -105,9 +105,9 @@ You can see the **ConnectionStatus** and **LastConnected** time, which is usuall
    ![Final step for registering Azure Stack HCI with Windows Admin Center](/media/wac_azure_register.png "Final step for registering Azure Stack HCI with Windows Admin Center")
 
 
-##You can now proceed on to [Viewing registration details in the Azure portal](#View-registration-details-in-the-Azure-portal)
+### You can now proceed on to [Viewing registration details in the Azure portal](#View-registration-details-in-the-Azure-portal)
 
-###Task 2: View registration details in the Azure portal ###
+## Task 2: View registration details in the Azure portal ###
 
 With registration complete, you should take some time to explore the artifacts that are created in Azure, once registration successfully completes.
 
