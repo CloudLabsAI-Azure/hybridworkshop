@@ -36,9 +36,9 @@ Azure Stack HCI 20H2 is delivered as an Azure service and needs to register with
      ```
     ![Volume created on Azure Stack HCI 20H2](/media/stackmodule.png "Volume created on Azure Stack HCI 20H2")
 
-**NOTE** - You may recieve a message that **PowerShellGet requires NuGet Provider...** - read the full message, and then click **Yes** to allow the appropriate dependencies to be installed. You may receive a second prompt to **install the modules from the PSGallery** - click **Yes to All** to proceed.
+  > **NOTE** - You may recieve a message that **PowerShellGet requires NuGet Provider...** - read the full message, and then click **Yes** to allow the appropriate dependencies to be installed. You may receive a second prompt to **install the modules from the PSGallery** - click **Yes to All** to proceed.
 
-In addition, in future releases, installing the Azure PowerShell **Az** modules will include **StackHCI**, however today, you have to install this module specifically, using the command **Install-Module Az.StackHCI**
+   In addition, in future releases, installing the Azure PowerShell **Az** modules will include **StackHCI**, however today, you have to install this module specifically, using      the command **Install-Module Az.StackHCI**
 
 3. With the Az.StackHCI modules installed, it's now time to register your Azure Stack HCI 20H2 cluster to Azure, however first, it's worth exploring how to check existing registration status.  The following code assumes you are still in the remote PowerShell session open from the previous commands.
 
