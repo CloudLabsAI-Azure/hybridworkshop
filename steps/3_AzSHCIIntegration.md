@@ -55,6 +55,7 @@ As you can see from the result, the cluster is yet to be registered, and the clu
 
 1. Now copy the below code and paste it in your powershell window, And replace *your-subscription-ID-here* with your subscription ID <inject key="Subscription ID" />. After updating the subscription ID run the powershell commands to register your Azure Stack HCI 20H2 to Azure portal. 
 
+
    ```powershell
   $password = ConvertTo-SecureString "demo!pass123" -AsPlainText -Force
   $azshciNodeCreds = New-Object System.Management.Automation.PSCredential ("hybrid\azureuser", $password)
@@ -67,9 +68,8 @@ As you can see from the result, the cluster is yet to be registered, and the clu
     -EnvironmentName "AzureCloud" `
     -ComputerName "AZSHCINODE01.hybrid.local" `
     –Credential $azshciNodeCreds `
-   
-
-    ```
+     
+     ```
 
 Of these commands, many are optional:
 
