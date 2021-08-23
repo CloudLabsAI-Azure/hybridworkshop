@@ -16,7 +16,7 @@ Contents
 Azure Stack HCI 20H2 is delivered as an Azure service and needs to register within 30 days of installation per the Azure Online Services Terms.  With our cluster configured, we'll now register your Azure Stack HCI 20H2 cluster with **Azure Arc** for monitoring, support, billing, and hybrid services. Upon registration, an Azure Resource Manager resource is created to represent each on-premises Azure Stack HCI 20H2 cluster, effectively extending the Azure management plane to Azure Stack HCI 20H2. Information is periodically synced between the Azure resource and the on-premises cluster.  One great aspect of Azure Stack HCI 20H2, is that the Azure Arc registration is a native capability of Azure Stack HCI 20H2, so there is no agent required.
 
 
-##Task 1: Register Azure Stack HCI 20H2 Cluster on Azure portal.
+## Task 1: Register Azure Stack HCI 20H2 Cluster on Azure portal.
 
 To complete registration, you have 2 options - you can use **Windows Admin Center**, or you can use **PowerShell**. For this lab, it's recommended to use the PowerShell approach, due to a few unpredictible erros in the lab environment, likely due to WAC installed on the domain controller. In this environment we will be using powershell to regitster the Azure Stack HCI cluster.
 
@@ -28,7 +28,7 @@ To complete registration, you have 2 options - you can use **Windows Admin Cente
     
 
     
-1. When the Powershell opens, Copy and run the following code to install the PowerShell Module for Azure Stack HCI 20H2 on that machine.
+2. When the Powershell opens, Copy and run the following code to install the PowerShell Module for Azure Stack HCI 20H2 on that machine.
 
      ```powershell
      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Force
@@ -40,7 +40,7 @@ To complete registration, you have 2 options - you can use **Windows Admin Cente
 
 In addition, in future releases, installing the Azure PowerShell **Az** modules will include **StackHCI**, however today, you have to install this module specifically, using the command **Install-Module Az.StackHCI**
 
-1. With the Az.StackHCI modules installed, it's now time to register your Azure Stack HCI 20H2 cluster to Azure, however first, it's worth exploring how to check existing registration status.  The following code assumes you are still in the remote PowerShell session open from the previous commands.
+3. With the Az.StackHCI modules installed, it's now time to register your Azure Stack HCI 20H2 cluster to Azure, however first, it's worth exploring how to check existing registration status.  The following code assumes you are still in the remote PowerShell session open from the previous commands.
 
      ```powershell
      Invoke-Command -ComputerName AZSHCINODE01 -ScriptBlock {
