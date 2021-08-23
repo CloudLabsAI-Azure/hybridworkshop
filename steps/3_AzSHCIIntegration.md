@@ -18,7 +18,7 @@ Azure Stack HCI 20H2 is delivered as an Azure service and needs to register with
 
 ## Task 1: Register Azure Stack HCI 20H2 Cluster on Azure portal.
 
-To complete registration, you have 2 options - you can use **Windows Admin Center**, or you can use **PowerShell**. For this lab, it's recommended to use the PowerShell approach, due to a few unpredictible erros in the lab environment, likely due to WAC installed on the domain controller. In this environment we will be using powershell to regitster the Azure Stack HCI cluster.
+   To complete registration, you have 2 options - you can use **Windows Admin Center**, or you can use **PowerShell**. For this lab, it's recommended to use the PowerShell approach, due to a few unpredictible erros in the lab environment, likely due to WAC installed on the domain controller. In this environment we will be using powershell to regitster the Azure Stack HCI cluster.
 
  We're going to perform the registration from the **HybridHost001** machine, which we've been using with the Windows Admin Center.
 
