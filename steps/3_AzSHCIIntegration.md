@@ -56,11 +56,11 @@ As you can see from the result, the cluster is yet to be registered, and the clu
 1. Now copy the below code and paste it in your powershell window, And replace *your-subscription-ID-here* with your subscription ID <inject key="Subscription ID" />. After updating the subscription ID run the powershell commands to register your Azure Stack HCI 20H2 to Azure portal. 
 
 
-   ```powershell
-  $password = ConvertTo-SecureString "demo!pass123" -AsPlainText -Force
-  $azshciNodeCreds = New-Object System.Management.Automation.PSCredential ("hybrid\azureuser", $password)
+    ```powershell
+     $password = ConvertTo-SecureString "demo!pass123" -AsPlainText -Force
+     $azshciNodeCreds = New-Object System.Management.Automation.PSCredential ("hybrid\azureuser", $password)
 
-  Register-AzStackHCI `
+     Register-AzStackHCI `
     -SubscriptionId "ad8c83dd-1c13-4b87-9acc-a24520706f46" `
     -ResourceName "azshciclus" `
     -ResourceGroupName "HybridHost" `
@@ -100,9 +100,6 @@ Of these commands, many are optional:
    ![Check updated registration status with PowerShell](/media/connected.png "Check updated registration status with PowerShell")
 
 You can see the **ConnectionStatus** and **LastConnected** time, which is usually within the last day unless the cluster is temporarily disconnected from the Internet. An Azure Stack HCI 20H2 cluster can operate fully offline for up to 30 consecutive days.
-
-
-   ![Final step for registering Azure Stack HCI with Windows Admin Center](/media/wac_azure_register.png "Final step for registering Azure Stack HCI with Windows Admin Center")
 
 
 ### You can now proceed on to [Viewing registration details in the Azure portal](#View-registration-details-in-the-Azure-portal)
