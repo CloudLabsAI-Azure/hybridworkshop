@@ -53,7 +53,7 @@ Azure Stack HCI 20H2 is delivered as an Azure service and needs to register with
 As you can see from the result, the cluster is yet to be registered, and the cluster status identifies as **Clustered**. Azure Stack HCI 20H2 needs to register within 30 days of installation per the Azure Online Services Terms. If not clustered after 30 days, the **ClusterStatus** will show **OutOfPolicy**, and if not registered after 30 days, the **RegistrationStatus** will show **OutOfPolicy**.
 
 
-1. Now copy the below code and paste it in your powershell window, And replace *your-subscription-ID-here* with your subscription ID <inject key="Subscription ID" />. After updating the subscription ID run the powershell commands to register your Azure Stack HCI 20H2 to Azure portal. 
+4. Now copy the below code and paste it in your powershell window, And replace *your-subscription-ID-here* with your subscription ID <inject key="Subscription ID" />. After updating the subscription ID run the powershell commands to register your Azure Stack HCI 20H2 to Azure portal. 
 
    > **Note**: We have already updated the domain user name and password for the local host server. 
    
@@ -83,15 +83,15 @@ Of these commands, many are optional:
 
 **Register-AzureStackHCI** runs syncronously, with progress reporting, and typically takes 1-2 minutes.  The first time you run it, it may take slightly longer, because it needs to install some dependencies, including additional Azure PowerShell modules.
 
-1. Once dependencies have been installed, you'll receive a popup on **HybridHost001** to authenticate to Azure. Provide your **Azure credentials**.
+5. Once dependencies have been installed, you'll receive a popup on **HybridHost001** to authenticate to Azure. Provide your **Azure credentials**.
 
     ![Login to Azure](/media/azure_login_reg.png "Login to Azure")
 
-1. Once successfully authenticated, the registration process will begin, and will take a few moments. Once complete, you should see a message indicating success, as per below:
+6. Once successfully authenticated, the registration process will begin, and will take a few moments. Once complete, you should see a message indicating success, as per below:
 
 ![Register Azure Stack HCI 20H2 with PowerShell](/media/registered.png "Register Azure Stack HCI 20H2 with PowerShell")
 
-1. Once the cluster is registered, run the following command on **HybridHost001** to check the updated status:
+7. Once the cluster is registered, run the following command on **HybridHost001** to check the updated status:
 
     ```powershell
     Invoke-Command -ComputerName AZSHCINODE01 -ScriptBlock {
