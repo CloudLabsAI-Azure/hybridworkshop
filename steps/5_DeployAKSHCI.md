@@ -312,9 +312,10 @@ Next, you'll scale your Kubernetes cluster to add an additional Linux worker nod
 
 **NOTE** - You can also scale your Control Plane nodes for this particular cluster, however it has to be **scaled independently from the worker nodes** themselves. You can scale the Control Plane nodes using the command. Before you run this command however, check that you have an extra 16GB memory left of your HybridHost001 OS - if your host has been deployed with 64GB RAM, you may not have enough capacity for an additonal 2 Control Plane VMs.
 
-    ```powershell
-    Set-AksHciCluster –Name akshciclus001 -controlPlaneNodeCount 3
-     ```
+
+      ```powershell
+      Set-AksHciCluster –Name akshciclus001 -controlPlaneNodeCount 3
+      ```
 
   > **NOTE** - the control plane node count should be an **odd** number, such as 1, 3, 5 etc.
 
