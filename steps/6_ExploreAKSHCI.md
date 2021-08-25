@@ -50,7 +50,7 @@ In our case, you can see that the service has been allocated the **192.168.0.152
 
 4. At this point, Open **Microsoft Edge** and navigate to the IP address that you have copied from previous step.
 
-    ![Azure vote app in Edge](/media/webpage.png "Azure vote app in Edge")
+    ![Azure vote app in Edge](/media/wenpage.png "Azure vote app in Edge")
 
 5. We have created a single replica of the Azure Vote front end and Redis instance. To see the number and state of pods in your cluster, use the **kubectl get command** as follows. The output should show one front end pod and one back-end pod:
 
