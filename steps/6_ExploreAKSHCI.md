@@ -30,17 +30,17 @@ As part of this brief tutorial, you'll deploy an [Azure vote application](https:
 
 2. Next, from the same **PowerShell **console**** run the following command to deploy the application directly from GitHub:
 
-```powershell
-kubectl apply -f https://raw.githubusercontent.com/Azure/aks-hci/main/eval/yaml/azure-vote.yaml
-```
+    ```powershell
+    kubectl apply -f https://raw.githubusercontent.com/Azure/aks-hci/main/eval/yaml/azure-vote.yaml
+    ```
 
-   ![Output of kubectl apply](/media/output1.png "Output of kubectl apply")
+    ![Output of kubectl apply](/media/output1.png "Output of kubectl apply")
 
 3. Next, run the following command to monitor the progress of the deployment (using the --watch argument):
 
-   ```powershell
-   kubectl get service azure-vote-front --watch
-   ```
+    ```powershell
+    kubectl get service azure-vote-front --watch
+    ```
 
 During deployment, you may see the **External-IP** showing as *Pending* - when this changes to an IP address, you can use **CTRL + C** to stop the watch process. The stopping process can take a few seconds to stop the script running.
 
@@ -153,13 +153,4 @@ With the network security group rule configured, there are some additional steps
 
 Congratulations!
 -----------
-You've reached the end of the evaluation guide.  In this guide you have:
-
-* Deployed/Configured a Windows Server 2019 Hyper-V host in Azure to run your nested sandbox environment
-* Deployed the AKS on Azure Stack HCI management cluster on your Windows Server 2019 Hyper-V environment
-* Deployed a target cluster to run applications and services
-* Optionally integrated with Azure Arc and deployed a sample application
-* Set the foundation for further learning!
-
-Great work!
-
+You've reached the end of the this exercise. You can now proceed with the next exercise.
