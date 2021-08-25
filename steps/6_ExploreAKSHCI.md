@@ -10,8 +10,6 @@ Contents
 - [Contents](#contents)
 - [Deploying a simple Linux application](#deploying-a-simple-linux-application)
 - [Expose a nested application to the internet](#expose-a-nested-application-to-the-internet)
-- [Integrating with Azure Arc](#integrating-with-azure-arc)
-- [Shutting down the environment](#shutting-down-the-environment)
 - [Congratulations!](#congratulations)
 
 Task 1: Deploying a simple Linux application
