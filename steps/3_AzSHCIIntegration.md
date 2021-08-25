@@ -69,15 +69,15 @@ Of these commands, many are optional:
 
 **Register-AzureStackHCI** runs syncronously, with progress reporting, and typically takes 1-2 minutes.  The first time you run it, it may take slightly longer, because it needs to install some dependencies, including additional Azure PowerShell modules.
 
-3. Once dependencies have been installed, you'll receive a popup on **HybridHost001** to authenticate to Azure. Provide your **Azure credentials**.
+4. Once dependencies have been installed, you'll receive a popup on **HybridHost001** to authenticate to Azure. Provide your **Azure credentials**.
 
     ![Login to Azure](/media/azure_login_reg.png "Login to Azure")
 
-4. Once successfully authenticated, the registration process will begin, and will take a few moments. Once complete, you should see a message indicating success, as per below:
+5. Once successfully authenticated, the registration process will begin, and will take a few moments. Once complete, you should see a message indicating success, as per below:
 
-![Register Azure Stack HCI 20H2 with PowerShell](/media/registered.png "Register Azure Stack HCI 20H2 with PowerShell")
+    ![Register Azure Stack HCI 20H2 with PowerShell](/media/registered.png "Register Azure Stack HCI 20H2 with PowerShell")
 
-5. Once the cluster is registered, run the following command on **HybridHost001** to check the updated status:
+6. Once the cluster is registered, run the following command on **HybridHost001** to check the updated status:
 
     ```powershell
     Invoke-Command -ComputerName AZSHCINODE01 -ScriptBlock {
