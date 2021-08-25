@@ -1,6 +1,6 @@
 # Azure Stack HCI 20H2 with Azure
 
-### Perform the lab on your own environment.
+### Setup the lab on your own Azure Subscription.
 
  Please follow the below steps to perform the lab in your subscription.
  
