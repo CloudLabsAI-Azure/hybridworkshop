@@ -9,7 +9,6 @@ Contents
 - [Overview](#overview)
 - [Contents](#contents)
 - [Architecture](#architecture)
-- [Allow popups in Edge browser](#allow-popups-in-edge-browser)
 - [Configure Windows Admin Center](#configure-windows-admin-center)
 - [Validate Azure integration](#validate-azure-integration)
 - [Deploying the AKS on Azure Stack HCI management cluster](#deploying-the-aks-on-azure-stack-hci-management-cluster)
