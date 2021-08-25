@@ -163,18 +163,15 @@ You'll notice that Windows Admin Center will validate memory, storage, networkin
 
 12. For **IP address allocation method** choose **DHCP**
 
-13.  Under **Load balancer settings**, enter the range from **192.168.0.150** to **192.168.0.250** and then click **Next:Azure registration**
+13. Under **Load balancer settings**, enter the range from **192.168.0.150** to **192.168.0.250** and then click **Next:Azure registration**
 
-      ![Host configuration in Windows Admin Center](/media/integration.png "Host configuration in Windows Admin Center")
+     ![Host configuration in Windows Admin Center](/media/integration.png "Host configuration in Windows Admin Center")
 
 14. On the **Azure registration page**, your Azure account should be automatically populated. Use the drop-down to select your preferred subscription. If you are prompted, log into Azure with your Azure credentials. Once successfully authenticated, you should see your **Account**, then **choose your subscription**
 
-      ![AKS Azure Registration in Windows Admin Center](/media/aks_azure_reg.png "AKS Azure Registration in Windows Admin Center")
-
-
 15. Once you've chosen your subscription, Select your resource group **HybridHost** and **East US** in Azure Region.
 
-       ![AKS Azure Registration in Windows Admin Center](/media/azure1.png "AKS Azure Registration in Windows Admin Center")
+     ![AKS Azure Registration in Windows Admin Center](/media/azure1.png "AKS Azure Registration in Windows Admin Center")
 
 16.  Click on **Next:Review**
   
