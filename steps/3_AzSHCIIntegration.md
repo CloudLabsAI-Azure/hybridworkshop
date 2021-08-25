@@ -9,7 +9,6 @@ Contents
 -----------
 - [Overview](#overview)
 - [Contents](#contents)
-- [Prerequisites for registration](#prerequisites-for-registration)
 - [Complete Registration](#complete-registration)
 
 
@@ -87,9 +86,6 @@ Of these commands, many are optional:
     ![Check updated registration status with PowerShell](/media/connected.png "Check updated registration status with PowerShell")
 
 You can see the **ConnectionStatus** and **LastConnected** time, which is usually within the last day unless the cluster is temporarily disconnected from the Internet. An Azure Stack HCI 20H2 cluster can operate fully offline for up to 30 consecutive days.
-
-
-### You can now proceed on to [Viewing registration details in the Azure portal](#View-registration-details-in-the-Azure-portal)
 
 ## Task 2: View registration details in the Azure portal ###
 
