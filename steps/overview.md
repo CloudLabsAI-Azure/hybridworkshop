@@ -4,4 +4,4 @@
 
  Please follow the below steps to perform the lab in your subscription.
  
- 1. Please follow this GitHub repo and peform all the mentioned steps https://github.com/mattmcspirit/hybridworkshop
+ 1. Please follow this GitHub repo and peform all the mentioned steps https://github.com/mattmcspirit/hybridworkshop, to setup the environment for Azure stach HCI 20h2.
