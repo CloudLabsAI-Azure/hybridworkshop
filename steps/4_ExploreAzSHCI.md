@@ -144,4 +144,8 @@ Great work!
 Setup the lab in your own Azure Subscription.
 -------------
 
-Please follow this GitHub repo https://github.com/mattmcspirit/hybridworkshop and peform all the mentioned steps, to setup the environment for Azure Stack HCI 20H2 Workshop.
+This lab is based on the the following work by Matt McSpirit: https://github.com/mattmcspirit/hybridworkshop
+
+ 
+
+If you want to setup the lab and run through additional scenarios as well within your subscription, you can go to the above GitHub repo and perform as mentioned.
