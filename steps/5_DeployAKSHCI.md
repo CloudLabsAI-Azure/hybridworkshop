@@ -148,9 +148,10 @@ You'll notice that Windows Admin Center will validate memory, storage, networkin
 
 **NOTE** - if you receive a WinRM error, open an **Administrative PowerShell console** and run the following command and then retry the step 9:
 
-      ```powershell
-      Restart-Service WinRm -Force
-      ```
+
+       ```powershell
+       Restart-Service WinRm -Force
+       ```
 
 9.  On the **Host configuration** page, under **Host details**, select your **V:**, and leave the other settings as default
 
