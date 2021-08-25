@@ -111,7 +111,7 @@ In order to successfully deploy AKS on Azure Stack HCI with Windows Admin Center
 
     ![HybridHost001 under management in Windows Admin Center](/media/akshcihost_in_wac.png "HybridHost001 under management in Windows Admin Center")
 
-## Task 2: Deploying the AKS on Azure Stack HCI management cluster
+## Task 3: Deploying the AKS on Azure Stack HCI management cluster
 -----------
 The next section will walk through configuring the AKS on Azure Stack HCI management cluster, on your single node Windows Server 2019 host.
 
@@ -206,7 +206,7 @@ You'll notice that Windows Admin Center will validate memory, storage, networkin
 ### Updates and Cleanup ###
 To learn more about **updating**, **redeploying** or **uninstalling** AKS on Azure Stack HCI with Windows Admin Center, you can [read the official documentation here.](https://docs.microsoft.com/en-us/azure-stack/aks-hci/setup "Official documentation on updating, redeploying and uninstalling AKS on Azure Stack HCI")
 
-Task 3: Create a Kubernetes cluster (Target cluster)
+Task 4: Create a Kubernetes cluster (Target cluster)
 -----------
 With the management cluster deployed successfully, you're ready to move on to deploying Kubernetes clusters that can host your workloads. We'll then briefly walk through how to scale your Kubernetes cluster and upgrade the Kubernetes version of your cluster.
 
@@ -279,7 +279,7 @@ With the management cluster deployed successfully, you're ready to move on to de
 
 
 
-Task 4: Scale your Kubernetes cluster (Target cluster)
+Task 5: Scale your Kubernetes cluster (Target cluster)
 -----------
 Next, you'll scale your Kubernetes cluster to add an additional Linux worker node. As it stands, this has to be performed with **PowerShell** but will be available in Windows Admin Center in the future.
 
@@ -335,7 +335,5 @@ To access this **akshciclus001** cluster using **kubectl** (which was installed 
 Next Steps
 -----------
 In this step, you've successfully deployed the AKS on Azure Stack HCI management cluster using Windows Admin Center, optionally integrated with Azure Arc, and subsequently, deployed and scaled a Kubernetes cluster that you can move forward with to the next stage, in which you can deploy your applications.
-
-* [**Part 5** - Explore AKS on Azure Stack HCI](/steps/6_ExploreAKSHCI.md "Explore AKS on Azure Stack HCI")
 
 
