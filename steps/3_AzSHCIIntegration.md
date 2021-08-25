@@ -22,7 +22,7 @@ Azure Stack HCI 20H2 is delivered as an Azure service and needs to register with
 
  We're going to perform the registration from the **HybridHost001** machine, which we've been using with the Windows Admin Center.
 
-1. On **HybridHost001**, Click on windows button and open **PowerShell ISE as administrator**
+1. On **HybridHost001** VM, you have already logged in, Click on windows button and open **PowerShell ISE as administrator**
 
     ![Volume created on Azure Stack HCI 20H2](https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/media/powershell.png "Volume created on Azure Stack HCI 20H2")
     
