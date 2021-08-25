@@ -24,7 +24,7 @@ Azure Stack HCI 20H2 is delivered as an Azure service and needs to register with
 
 1. On **HybridHost001**, Click on windows button and open **PowerShell ISE as administrator**
 
-    ![Volume created on Azure Stack HCI 20H2](/media/powershell.png "Volume created on Azure Stack HCI 20H2")
+    ![Volume created on Azure Stack HCI 20H2](https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/media/powershell.png "Volume created on Azure Stack HCI 20H2")
     
 2. With the Az.StackHCI modules installed, it's now time to register your Azure Stack HCI 20H2 cluster to Azure, however first, it's worth exploring how to check existing registration status.  The following code assumes you are still in the remote PowerShell session open from the previous commands.
 
