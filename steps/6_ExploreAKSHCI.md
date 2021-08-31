@@ -144,7 +144,7 @@ With the network security group rule configured, there are some additional steps
       Start-Service -Name "http" 
       Get-Service -Name "http"
     ```
-    ![Result of Add-NetNatStaticMapping](/media/http.png "Result of Add-NetNatStaticMapping") 
+    ![Result of Add-NetNatStaticMapping](https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/media/http.png "Result of Add-NetNatStaticMapping") 
     
    >Note: Make sure that the http service is in running status before running the next step.
    
