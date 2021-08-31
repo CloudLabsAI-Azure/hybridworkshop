@@ -9,11 +9,6 @@ Contents
 - [Overview](#overview)
 - [Contents](#contents)
 - [Architecture](#architecture)
-- [Configure Windows Admin Center](#Task 1: configure-windows-admin-center)
-- [Validate Azure integration](#validate-azure-integration)
-- [Deploying the AKS on Azure Stack HCI management cluster](#deploying-the-aks-on-azure-stack-hci-management-cluster)
-- [Create a Kubernetes cluster (Target cluster)](#create-a-kubernetes-cluster-target-cluster)
-- [Scale your Kubernetes cluster (Target cluster)](#scale-your-kubernetes-cluster-target-cluster)
 - [Next Steps](#next-steps)
 
 Architecture
@@ -189,7 +184,7 @@ You'll notice that Windows Admin Center will validate memory, storage, networkin
 
 *******************************************************************************************************
 
-> **NOTE 1** - Do not close the Windows Admin Center browser at this time. Leave it open and wait for successful completion.
+> **NOTE 1** - Do not close the Windows Admin Center browser at this time. Leave it open and wait for successful completion. if you see that the creation is failed, you can click on back and start the creation from step 16 again and it will deploy the cluster.
 
 > **NOTE 2** - You may receive a WinRM error message stating "Downloading virtual machine images and binaries for the AKS host failed" - this can be ignored, so **do not close/refresh the browser**.
 
@@ -287,8 +282,8 @@ Next, you'll scale your Kubernetes cluster to add an additional Linux worker nod
 1. Open **PowerShell as Administrator** if not already opened and run the following command to import the new modules, and list their functions.
 
      ```powershell
-      Import-Module AksHci
-      Get-Command -Module AksHci
+     Import-Module AksHci
+     Get-Command -Module AksHci
      ```
 
 2. Next, to check on the status of the existing clusters, run the following
@@ -305,14 +300,13 @@ Next, you'll scale your Kubernetes cluster to add an additional Linux worker nod
 
     ```powershell
     Set-AksHciCluster –Name akshciclus001 -linuxNodeCount 2 -windowsNodeCount 1
-     ```
+    ```
 
 **NOTE** - You can also scale your Control Plane nodes for this particular cluster, however it has to be **scaled independently from the worker nodes** themselves. You can scale the Control Plane nodes using the command. Before you run this command however, check that you have an extra 16GB memory left of your HybridHost001 OS - if your host has been deployed with 64GB RAM, you may not have enough capacity for an additonal 2 Control Plane VMs.
 
-
-      ```powershell
-      Set-AksHciCluster –Name akshciclus001 -controlPlaneNodeCount 3
-      ```
+    ```powershell
+    Set-AksHciCluster –Name akshciclus001 -controlPlaneNodeCount 3
+    ```
 
   > **NOTE** - the control plane node count should be an **odd** number, such as 1, 3, 5 etc.
 
