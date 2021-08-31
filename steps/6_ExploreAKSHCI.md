@@ -134,9 +134,21 @@ With the network security group rule configured, there are some additional steps
 
     ![Using kubectl to retrieve info about the application](/media/kubectl_service.png "Using kubectl to retrieve info about the application")
 
-1. As you can see from the image, this particular app has been assigned the IP address **192.168.0.153** and is accessible on port **80**
+2. As you can see from the image, this particular app has been assigned the IP address **192.168.0.153** and is accessible on port **80**
 
-1. Now open Powershell to create a new Static NAT Mapping, run the following PowerShell command:
+
+3. In this step we will restart the **http** service to add the external IP in next step, Copy the below commands and run in the powershell.
+
+    ```powershell
+      Stop-Service -Name "http" -Force
+      Start-Service -Name "http" 
+      Get-Service -Name "http"
+    ```
+    ![Result of Add-NetNatStaticMapping](/media/http.png "Result of Add-NetNatStaticMapping") 
+    
+   >Note: Make sure that the http service is in running status before running the next step.
+   
+4. Now open Powershell to create a new Static NAT Mapping, run the following PowerShell command:
 
     ```powershell
     Add-NetNatStaticMapping -NatName "HYBRIDNAT" -Protocol TCP -ExternalIPAddress '0.0.0.0/24' -ExternalPort 80 `
@@ -144,12 +156,23 @@ With the network security group rule configured, there are some additional steps
      ```
     ![Result of Add-NetNatStaticMapping](/media/Add-NetNatStaticMapping.png "Result of Add-NetNatStaticMapping")
 
-4. The NAT static mapping should be successfully created, and you can now test the access of your application from outside of the Azure VM. You should try to access the web application using the **Azure VM Public IP** which you [noted down earlier](#add-an-inbound-rule-to-your-nsg).
+5. The NAT static mapping should be successfully created, and you can now test the access of your application from outside of the Azure VM. You should try to access the web application using the **Azure VM Public IP** which you [noted down earlier](#add-an-inbound-rule-to-your-nsg).
 
     ![Access web application using Azure Public IP](/media/access_web_app.png "Access web application using Azure Public IP")
 
 **NOTE** - This process creates a NAT static mapping that's specific to that External IP and Port of that specific Kubernetes service you have deployed in the environment. You will need to repeat the process for additional applications. To learn more about PowerShell NetNat commands, [visit the official documentation](https://docs.microsoft.com/en-us/powershell/module/netnat "Official documentation for NetNat").
 
+
+6. Now run the below command to start the Windows Admin center service as we will be working on Admin center in next exercise.
+
+    ```powershell 
+    Start-Service -Name "ServerManagementGateway"
+    Get-Service -Name "ServerManagementGateway"
+    ```
+   ![Result of Add-NetNatStaticMapping](/media/windows.png "Result of Add-NetNatStaticMapping")
+
+   >Note: Make sure that the ServerManagementGateway service is in running status before running the next step.
+   
 
 Congratulations!
 -----------
