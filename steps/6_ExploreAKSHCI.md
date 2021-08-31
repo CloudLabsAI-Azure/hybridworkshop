@@ -42,17 +42,17 @@ As part of this brief tutorial, you'll deploy an [Azure vote application](https:
     kubectl get service azure-vote-front --watch
     ```
 
-During deployment, you may see the **External-IP** showing as *Pending* - when this changes to an IP address, you can use **CTRL + C** to stop the watch process. The stopping process can take a few seconds to stop the script running.
+4.  During deployment, you may see the **External-IP** showing as *Pending* - when this changes to an IP address, you can use **CTRL + C** to stop the watch process. The stopping    process can take a few seconds to stop the script running.
 
-   ![Output of kubectl get service](/media/IP.png "Output of kubectl get service")
+     ![Output of kubectl get service](/media/IP.png "Output of kubectl get service")
 
-In our case, you can see that the service has been allocated the **192.168.0.152** IP address. Copy the IP Address to use in the next step.
+    In our case, you can see that the service has been allocated the **192.168.0.152** IP address. Copy the IP Address to use in the next step.
 
-4. At this point, Open **Microsoft Edge** and navigate to the IP address that you have copied from previous step.
+5. At this point, Open **Microsoft Edge** and navigate to the IP address that you have copied from previous step.
 
     ![Azure vote app in Edge](/media/wenpage.png "Azure vote app in Edge")
 
-5. We have created a single replica of the Azure Vote front end and Redis instance. To see the number and state of pods in your cluster, use the **kubectl get command** as follows. The output should show one front end pod and one back-end pod:
+6. We have created a single replica of the Azure Vote front end and Redis instance. To see the number and state of pods in your cluster, use the **kubectl get command** as follows. The output should show one front end pod and one back-end pod:
 
     ```powershell
     kubectl get pods -n default
@@ -60,7 +60,7 @@ In our case, you can see that the service has been allocated the **192.168.0.152
 
    ![Output of kubectl get pods](/media/nodes1.png "Output of kubectl get pods")
 
-6. To change the number of pods in the azure-vote-front deployment, use the **kubectl scale command**. The following example **increases the number of front end pods to 5**
+7. To change the number of pods in the azure-vote-front deployment, use the **kubectl scale command**. The following example **increases the number of front end pods to 5**
 
     ```powershell
     kubectl scale --replicas=5 deployment/azure-vote-front
@@ -68,7 +68,7 @@ In our case, you can see that the service has been allocated the **192.168.0.152
 
      ![Output of kubectl scale](/media/kubectl_scale.png "Output of kubectl scale")
 
-7. Run **kubectl get pods** again to verify that additional pods have been created. After a minute or so, the additional pods are available in your cluster
+8. Run **kubectl get pods** again to verify that additional pods have been created. After a minute or so, the additional pods are available in your cluster
 
     ```powershell
     kubectl get pods -n default
