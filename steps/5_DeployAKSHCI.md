@@ -9,7 +9,7 @@ Contents
 - [Overview](#overview)
 - [Contents](#contents)
 - [Architecture](#architecture)
-- [Configure Windows Admin Center](#configure-windows-admin-center)
+- [Configure Windows Admin Center](### Task 1: configure-windows-admin-center)
 - [Validate Azure integration](#validate-azure-integration)
 - [Deploying the AKS on Azure Stack HCI management cluster](#deploying-the-aks-on-azure-stack-hci-management-cluster)
 - [Create a Kubernetes cluster (Target cluster)](#create-a-kubernetes-cluster-target-cluster)
