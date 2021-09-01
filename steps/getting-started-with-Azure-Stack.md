@@ -14,10 +14,7 @@ Access the Azure Stack HCI20H2 VM
     
     ![Volume created on Azure Stack HCI 20H2](/media/mainpage.png "Volume created on Azure Stack HCI 20H2")
        
-3. Now navigate to page **11** in integrated lab guide by click on **Next** Button, You can also split the lab guide from the VM to get a better resolution of the lab guide.
 
-    ![Volume created on Azure Stack HCI 20H2](/media/nextpage.png "Volume created on Azure Stack HCI 20H2")
-  
 Get the Azure Resources details
 -------
 
