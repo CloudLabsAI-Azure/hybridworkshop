@@ -14,11 +14,11 @@ Contents
 
 Task 1: Deploying a simple Linux application
 -----------
-With your cluster up and running, to illustrate how easy it is to deploy a containerized application, The following steps will highlight key areas of deployment, testing and scaling an application.
+With your cluster up and running, to illustrate how easy it is to deploy a containerized application, The following steps will highlight key areas of deployment, testing, and scaling an application.
 
-During the deployment of AKS on Azure Stack HCI, **kubectl** was configured on your Azure VM Host. Kubectl provides a number of different ways to manage your Kubernetes clusters and applications.
+During the deployment of AKS on Azure Stack HCI, **kubectl** was configured on your Azure VM Host. Kubectl provides several ways to manage your Kubernetes clusters and applications.
 
-As part of this brief tutorial, you'll deploy an [Azure vote application](https://github.com/Azure-Samples/azure-voting-app-redis "Azure vote application on GitHub"). In order to deploy the application, you'll need a Kubernetes manifest file. A Kubernetes manifest file defines a desired state for the cluster, such as what container images to run. The manifest we'll use in this tutorial includes two Kubernetes deployments - one for the sample Azure Vote Python application, and the other for a Redis instance. Two Kubernetes services are also created - an internal service for the Redis instance, and an external service to access the Azure Vote application from the internet.
+As part of this brief tutorial, you'll deploy an [Azure vote application](https://github.com/Azure-Samples/azure-voting-app-redis "Azure vote application on GitHub"). In order to deploy the application, you'll need a Kubernetes manifest file. A Kubernetes manifest file defines the desired state for the cluster, such as what container images to run. The manifest we'll use in this tutorial includes two Kubernetes deployments - one for the sample Azure Vote Python application, and the other for a Redis instance. Two Kubernetes services are also created - an internal service for the Redis instance, and external service to access the Azure Vote application from the internet.
 
 1. First, run the following command from an **administrative PowerShell command** to list your Kubernetes nodes
 
@@ -42,13 +42,13 @@ As part of this brief tutorial, you'll deploy an [Azure vote application](https:
     kubectl get service azure-vote-front --watch
     ```
 
-During deployment, you may see the **External-IP** showing as *Pending* - when this changes to an IP address, you can use **CTRL + C** to stop the watch process. The stopping process can take a few seconds to stop the script running.
+During deployment, you may see the **External-IP** showing as *Pending* - when this changes to an IP address, you can use **CTRL + C** to stop the watch process. The stopping process can take a few seconds to stop the script from running.
 
    ![Output of kubectl get service](/media/IP.png "Output of kubectl get service")
 
 In our case, you can see that the service has been allocated the **192.168.0.152** IP address. Copy the IP Address to use in the next step.
 
-4. At this point, Open **Microsoft Edge** and navigate to the IP address that you have copied from previous step.
+4. At this point, open **Microsoft Edge** and navigate to the IP address that you have copied from the previous step.
 
     ![Azure vote app in Edge](/media/wenpage.png "Azure vote app in Edge")
 
@@ -82,7 +82,7 @@ If you want to continue your learning on AKS-HCI, and are interested in deployin
 
 Task 2: Expose a nested application to the internet
 -----------
-If you've followed all the steps in this guide, you'll have a running AKS-HCI infrastructure, including a target cluster that can run your containerized workloads. Additionally, if you've deployed the simple Linux application using the [tutorial above](#deploying-a-simple-linux-application), you'll now have an Azure Voting web application running in a container on your AKS-HCI infrastructure. This application will likely have been allocated an IP address from your internal NAT network, **192.168.0.0/16**, and opening your Edge browser within the Azure VM allows you to access that web application using it's 192.168.0.x IP address and optionally, its port number..
+If you've followed all the steps in this guide, you'll have a running AKS-HCI infrastructure, including a target cluster that can run your containerized workloads. Additionally, if you've deployed the simple Linux application using the [tutorial above](#deploying-a-simple-linux-application), you'll now have an Azure Voting web application running in a container on your AKS-HCI infrastructure. This application will likely have been allocated an IP address from your internal NAT network, **192.168.0.0/16**, and opening your Edge browser within the Azure VM allows you to access that web application using its 192.168.0.x IP address and optionally, its port number.
 
 However, the Azure Voting web app, and any other apps on the 192.168.0.0/16 internal network inside your Azure VM, cannot be reached from outside of the Azure VM, unless you perform some additional configuration.
 
@@ -91,7 +91,7 @@ However, the Azure Voting web app, and any other apps on the 192.168.0.0/16 inte
 ### Add an inbound rule to your NSG ###
 In this example, using the [previously deployed simple Linux application](#deploying-a-simple-linux-application), I'm going to expose **port 80** through to my Azure VM internal NAT network, and then on to my Azure Voting app.
 
-1. Firstly, visit https://portal.azure.com/, and login with your credentials you've been using for the evaluation. 
+1. First, visit https://portal.azure.com/, and login with the credentials you've been using for the evaluation. 
 
 1. Once logged in, using the search box on the dashboard, enter "HybridHost001" and once the results are returned, click on your AKSHCIHost virtual machine.
 
@@ -134,7 +134,7 @@ With the network security group rule configured, there are some additional steps
 
     ![Using kubectl to retrieve info about the application](/media/kubectl_service.png "Using kubectl to retrieve info about the application")
 
-1. As you can see from the image, this particular app has been assigned the IP address **192.168.0.153** and is accessible on port **80**
+1. As you can see from the image, this particular app has been assigned to the IP address **192.168.0.153** and is accessible on port **80**
 
 1. Now open Powershell to create a new Static NAT Mapping, run the following PowerShell command:
 
@@ -144,7 +144,7 @@ With the network security group rule configured, there are some additional steps
      ```
     ![Result of Add-NetNatStaticMapping](/media/Add-NetNatStaticMapping.png "Result of Add-NetNatStaticMapping")
 
-4. The NAT static mapping should be successfully created, and you can now test the access of your application from outside of the Azure VM. You should try to access the web application using the **Azure VM Public IP** which you [noted down earlier](#add-an-inbound-rule-to-your-nsg).
+4. The NAT static mapping should be successfully created, and you can now test the accessibility of your application from outside of the Azure VM. You should try to access the web application using the **Azure VM Public IP** which you [noted down earlier](#add-an-inbound-rule-to-your-nsg).
 
     ![Access web application using Azure Public IP](/media/access_web_app.png "Access web application using Azure Public IP")
 
@@ -153,4 +153,4 @@ With the network security group rule configured, there are some additional steps
 
 Congratulations!
 -----------
-You've reached the end of the this exercise. You can now proceed with the next exercise.
+You've reached the end of this exercise. You can now proceed with the next exercise.
