@@ -113,71 +113,70 @@ The next section will walk through configuring the AKS on Azure Stack HCI manage
  
     ![HybridHost001 under management in Windows Admin Center](/media/cluster.png "HybridHost001 under management in Windows Admin Center")
 
-3. You'll be presented with a rich array of information about your HybridHost001 cluster, of which you can feel free to explore the different options and metrics. When you're ready, on the left-hand side, scroll down and under **Extensions**, click **Azure Kubernetes Service**
+1. You'll be presented with a rich array of information about your HybridHost001 cluster, of which you can feel free to explore the different options and metrics. When you're ready, on the left-hand side, scroll down and under **Extensions**, click **Azure Kubernetes Service** and then Click on **Set up** to start the deployment process.
 
    ![Ready to deploy AKS-HCI with Windows Admin Center](/media/aks.png "Ready to deploy AKS-HCI with Windows Admin Center")
 
 You'll notice the terminology used refers to the **Azure Kubernetes Service Runtime on Windows Server​​** - the naming differs depending on if you're running the installation of AKS on a Windows Server 2019 Hyper-V platform, or the newer Azure Stack HCI 20H2 platform. The overall deployment experience is the same regardless of underlying platform.
 
-3. Click on **Set up** to start the deployment process
-4. Firstly, review the prerequisites - your Azure VM environment will meet all the prerequisites, so you should be fine to click **Next: System checks**
+1. Firstly, review the prerequisites - your Azure VM environment will meet all the prerequisites, so you should be fine to click **Next: System checks**
 
      ![HybridHost001 under management in Windows Admin Center](/media/review.png "HybridHost001 under management in Windows Admin Center")
 
-5. On the **System checks** page, enter the password **demo!pass123** for your **azureuser** account and when successfully validated, click on the **Install** button to **install the required PowerShell modules**, this will take a few moments to install the powershell modules. 
+1. On the **System checks** page, enter the password **demo!pass123** for your **azureuser** account and when successfully validated, click on the **Install** button to **install the required PowerShell modules**, this will take a few moments to install the powershell modules. 
 
      ![HybridHost001 under management in Windows Admin Center](/media/install.png "HybridHost001 under management in Windows Admin Center")
      
-6. During the system checks stage, Windows Admin Center will begin to validate it's own configuration, and the configuration of your target nodes, which in this case, is the Windows Server 2019 Hyper-V host (HybridHost001, running in your Azure VM)
+1. During the system checks stage, Windows Admin Center will begin to validate it's own configuration, and the configuration of your target nodes, which in this case, is the Windows Server 2019 Hyper-V host (HybridHost001, running in your Azure VM)
 
    ![System checks performed by Windows Admin Center](/media/creds.png "System checks performed by Windows Admin Center")
 
 You'll notice that Windows Admin Center will validate memory, storage, networking, roles and features and more. If you've followed the guide correctly, you'll find you'll pass all the checks and can proceed.
 
-7. Once validated, click **Next: Credential delegation**
+1. Once validated, click **Next: Credential delegation**
 
-8. On the **Credential delegation** page, read the information about **CredSSP**, then click **Enable**. Once enabled, click **Next: Host configuration**
+1. On the **Credential delegation** page, read the information about **CredSSP**, then click **Enable**. Once enabled, click **Next: Host configuration**
 
     ![Enable CredSSP in Windows Admin Center](/media/enabled.png "Enable CredSSP in Windows Admin Center")
 
-**NOTE** - if you receive a WinRM error, open an **Administrative PowerShell console** and run the following command and then retry the step 9:
+   **NOTE** - if you receive a WinRM error, open an **Administrative PowerShell console** and run the following command and then retry the step 7:
 
 
-       ```powershell
-       Restart-Service WinRm -Force
-       ```
+     ```
+     Restart-Service WinRm -Force
+     ```
 
-9.  On the **Host configuration** page, under **Host details**, select your **V:**, and leave the other settings as default
+1. On the **Host configuration** page, under **Host details**, select your **V:**, and leave the other settings as default
 
      ![Host configuration in Windows Admin Center](/media/vdrive.png "Host configuration in Windows Admin Center")
 
-10. Under **VM Networking**, ensure that **InternalNAT** is selected for the **Internet-connected virtual switch**
+1. Under **VM Networking**, ensure that **InternalNAT** is selected for the **Internet-connected virtual switch**
 
-11. For **Enable virtual LAN identification**, leave this selected as **No**
+1. For **Enable virtual LAN identification**, leave this selected as **No**
 
-12. For **IP address allocation method** choose **DHCP**
+1. For **IP address allocation method** choose **DHCP**
 
-13. Under **Load balancer settings**, enter the range from **192.168.0.150** to **192.168.0.250** and then click **Next:Azure registration**
+1. Under **Load balancer settings**, enter the range from **192.168.0.150** to **192.168.0.250** and then click **Next:Azure registration**
 
      ![Host configuration in Windows Admin Center](/media/integration.png "Host configuration in Windows Admin Center")
 
-14. On the **Azure registration page**, your Azure account should be automatically populated. Use the drop-down to select your preferred subscription. If you are prompted, log into Azure with your Azure credentials. Once successfully authenticated, you should see your **Account**, then **choose your subscription**
+1. On the **Azure registration page**, your Azure account should be automatically populated. Use the drop-down to select your preferred subscription. If you are prompted, log into Azure with your Azure credentials. Once successfully authenticated, you should see your **Account**, then **choose your subscription**
 
-15. Once you've chosen your subscription, Select your resource group **HybridHost** and **East US** in Azure Region.
+1. Once you've chosen your subscription, Select your resource group **HybridHost** and **East US** in Azure Region.
 
      ![AKS Azure Registration in Windows Admin Center](/media/azure1.png "AKS Azure Registration in Windows Admin Center")
 
-16.  Click on **Next:Review**
+1.  Click on **Next: Review**
   
-17. Review your choices and settings, then click **Apply**.
+1. Review your choices and settings, then click **Apply**.
 
      ![AKS Azure Registration in Windows Admin Center](/media/review-apply.png "AKS Azure Registration in Windows Admin Center")
 
-18. After a few moments, you may be **prompted to grant consent** to the Windows Admin Center Azure AD application. Ensure you select **Consent on behalf of your organization** then click **Accept**. The settings will be applied, and you should receive some notifications:
+1. After a few moments, you may be **prompted to grant consent** to the Windows Admin Center Azure AD application. Ensure you select **Consent on behalf of your organization** then click **Accept**. The settings will be applied, and you should receive some notifications:
 
      ![Setting the AKS-HCI config in Windows Admin Center](/media/confirmed.png "Setting the AKS-HCI config in Windows Admin Center")
 
-19. Once confirmed, you can click **Next: New cluster** to start the deployment process of the management cluster.
+1. Once confirmed, you can click **Next: New cluster** to start the deployment process of the management cluster.
 
      ![AKS on Azure Stack HCI management cluster deployment started in Windows Admin Center](/media/deploying.png "AKS on Azure Stack HCI management cluster deployment started in Windows Admin Center")
 
@@ -189,14 +188,13 @@ You'll notice that Windows Admin Center will validate memory, storage, networkin
 
 *******************************************************************************************************
 
-20.  Upon completion you should receive a notification of success. In this case, you can see deployment of the AKS on Azure Stack HCI management cluster took just over 12 minutes. In some cases it can take upto 20 minutes to deploy the cluster.
+1.  Upon completion you should receive a notification of success. In this case, you can see deployment of the AKS on Azure Stack HCI management cluster took just over 12 minutes. In some cases it can take upto 20 minutes to deploy the cluster.
 
-![AKS-HCI management cluster deployment completed in Windows Admin Center](/media/deployed.png "AKS-HCI management cluster deployment completed in Windows Admin Center")
+    ![AKS-HCI management cluster deployment completed in Windows Admin Center](/media/deployed.png "AKS-HCI management cluster deployment completed in Windows Admin Center")
 
-21. Once reviewed, click **Finish**. You will then be presented with a management dashboard where you can create and manage your Kubernetes clusters.
-
+1. Once reviewed, click **Finish**. You will then be presented with a management dashboard where you can create and manage your Kubernetes clusters.
      
-     ![AKS on Azure Stack HCI management cluster deployment started in Windows Admin Center](/media/dashboard.png "AKS on Azure Stack HCI management cluster deployment started in Windows Admin Center")
+    ![AKS on Azure Stack HCI management cluster deployment started in Windows Admin Center](/media/dashboard.png "AKS on Azure Stack HCI management cluster deployment started in Windows Admin Center")
      
 ### Updates and Cleanup ###
 To learn more about **updating**, **redeploying** or **uninstalling** AKS on Azure Stack HCI with Windows Admin Center, you can [read the official documentation here.](https://docs.microsoft.com/en-us/azure-stack/aks-hci/setup "Official documentation on updating, redeploying and uninstalling AKS on Azure Stack HCI")
@@ -264,15 +262,13 @@ With the management cluster deployed successfully, you're ready to move on to de
 
      ![Completed deployment of AKS cluster in Windows Admin Center](/media/finish.png "Completed deployment of AKS cluster in Windows Admin Center")
 
-14. Back in the **Azure Kubernetes Service on Azure Stack HCI landing page**, you should now see your cluster listed
+14. Back in the **Azure Kubernetes Service on Azure Stack HCI landing page**, you should now see your cluster listed.
 
      ![AKS cluster in Windows Admin Center](/media/akscluster.png "AKS cluster in Windows Admin Center")
 
 16. On the dashboard, if you chose to integrate with Azure Arc, you should be able to click the **Azure instance** link to be taken to the Azure Arc view in the Azure portal.
 
      ![AKS cluster in Azure Arc](/media/aks1.png "AKS cluster in Azure Arc")
-
-
 
 Task 5: Scale your Kubernetes cluster (Target cluster)
 -----------
