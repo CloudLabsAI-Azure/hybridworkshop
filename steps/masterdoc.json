@@ -45,21 +45,25 @@
           "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AVW-Arc-enabled-dataservices/aiw-arc/Instructions/04.md",
           "Order": 10
         },
-        {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/steps/3_AzSHCIIntegration.md",
+      {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/steps/getting-started-with-Azure-Stack.md",
           "Order": 11
         },
-        {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/steps/5_DeployAKSHCI.md",
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/steps/3_AzSHCIIntegration.md",
           "Order": 12
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/steps/6_ExploreAKSHCI.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/steps/5_DeployAKSHCI.md",
           "Order": 13
         },
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/steps/4_ExploreAzSHCI.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/steps/6_ExploreAKSHCI.md",
           "Order": 14
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/steps/4_ExploreAzSHCI.md",
+          "Order": 15
         }
       ]
     }

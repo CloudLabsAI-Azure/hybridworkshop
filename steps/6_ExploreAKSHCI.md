@@ -44,15 +44,15 @@ As part of this brief tutorial, you'll deploy an [Azure vote application](https:
 
 During deployment, you may see the **External-IP** showing as *Pending* - when this changes to an IP address, you can use **CTRL + C** to stop the watch process. The stopping process can take a few seconds to stop the script from running.
 
-   ![Output of kubectl get service](/media/IP.png "Output of kubectl get service")
+     ![Output of kubectl get service](/media/IP.png "Output of kubectl get service")
 
-In our case, you can see that the service has been allocated the **192.168.0.152** IP address. Copy the IP Address to use in the next step.
+    In our case, you can see that the service has been allocated the **192.168.0.152** IP address. Copy the IP Address to use in the next step.
 
 4. At this point, open **Microsoft Edge** and navigate to the IP address that you have copied from the previous step.
 
     ![Azure vote app in Edge](/media/wenpage.png "Azure vote app in Edge")
 
-5. We have created a single replica of the Azure Vote front end and Redis instance. To see the number and state of pods in your cluster, use the **kubectl get command** as follows. The output should show one front end pod and one back-end pod:
+6. We have created a single replica of the Azure Vote front end and Redis instance. To see the number and state of pods in your cluster, use the **kubectl get command** as follows. The output should show one front end pod and one back-end pod:
 
     ```powershell
     kubectl get pods -n default
@@ -60,7 +60,7 @@ In our case, you can see that the service has been allocated the **192.168.0.152
 
    ![Output of kubectl get pods](/media/nodes1.png "Output of kubectl get pods")
 
-6. To change the number of pods in the azure-vote-front deployment, use the **kubectl scale command**. The following example **increases the number of front end pods to 5**
+7. To change the number of pods in the azure-vote-front deployment, use the **kubectl scale command**. The following example **increases the number of front end pods to 5**
 
     ```powershell
     kubectl scale --replicas=5 deployment/azure-vote-front
@@ -68,7 +68,7 @@ In our case, you can see that the service has been allocated the **192.168.0.152
 
      ![Output of kubectl scale](/media/kubectl_scale.png "Output of kubectl scale")
 
-7. Run **kubectl get pods** again to verify that additional pods have been created. After a minute or so, the additional pods are available in your cluster
+8. Run **kubectl get pods** again to verify that additional pods have been created. After a minute or so, the additional pods are available in your cluster
 
     ```powershell
     kubectl get pods -n default
@@ -134,8 +134,22 @@ With the network security group rule configured, there are some additional steps
 
     ![Using kubectl to retrieve info about the application](/media/kubectl_service.png "Using kubectl to retrieve info about the application")
 
-1. As you can see from the image, this particular app has been assigned to the IP address **192.168.0.153** and is accessible on port **80**
 
+1. As you can see from the image, this particular app has been assigned with IP address **192.168.0.153** and is accessible on port **80**
+
+
+
+1. In this step we will restart the **http** service to add the external IP in next step, Copy the below commands and run in the powershell.
+
+    ```powershell
+      Stop-Service -Name "http" -Force
+      Start-Service -Name "http" 
+      Get-Service -Name "http"
+    ```
+    ![Result of Add-NetNatStaticMapping](https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/media/http.png "Result of Add-NetNatStaticMapping") 
+    
+   >Note: Make sure that the http service is in running status before running the next step.
+   
 1. Now open Powershell to create a new Static NAT Mapping, run the following PowerShell command:
 
     ```powershell
@@ -150,6 +164,16 @@ With the network security group rule configured, there are some additional steps
 
 **NOTE** - This process creates a NAT static mapping that's specific to that External IP and Port of that specific Kubernetes service you have deployed in the environment. You will need to repeat the process for additional applications. To learn more about PowerShell NetNat commands, [visit the official documentation](https://docs.microsoft.com/en-us/powershell/module/netnat "Official documentation for NetNat").
 
+6. Now run the below command to start the Windows Admin center service as we will be working on Admin center in next exercise.
+
+    ```powershell 
+    Start-Service -Name "ServerManagementGateway"
+    Get-Service -Name "ServerManagementGateway"
+    ```
+   ![Result of Add-NetNatStaticMapping](/media/windows.png "Result of Add-NetNatStaticMapping")
+
+   >Note: Make sure that the ServerManagementGateway service is in running status before running the next step.
+   
 
 Congratulations!
 -----------
