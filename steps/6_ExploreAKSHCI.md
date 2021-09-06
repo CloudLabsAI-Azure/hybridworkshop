@@ -113,7 +113,7 @@ In this example, using the [previously deployed simple Linux application](#deplo
     * Protocol: Select TCP
     * Action: Select Allow
     * Priority: ```1010```
-    * Name: ```AzureVotinApp```
+    * Name: ```AzureVotingApp```
 
     ![Add inbound security rule in Azure](/media/addinbound.png "Add inbound security rule in Azure")
 
