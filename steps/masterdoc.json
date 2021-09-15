@@ -5,7 +5,7 @@
       "BaseURL": "https://github.com/CloudLabsAI-Azure/hybridworkshop",
       "Files": [
         {
-          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/AIW-Hybrid-cloud-solutions/main/README.md",
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/hybridworkshop/main/steps/readme.md",
           "Order": 1
         },
         {
