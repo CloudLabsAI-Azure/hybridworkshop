@@ -1,4 +1,4 @@
-Explore the management of your Azure Stack HCI 20H2 environment
+Explore the management of your Azure Stack HCI 20H2 environment (Optional)
 ==============
 Overview
 -----------
