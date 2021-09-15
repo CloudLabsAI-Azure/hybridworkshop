@@ -1,4 +1,4 @@
-Deploy your AKS-HCI infrastructure
+Exercise 2: Deploy your AKS-HCI infrastructure
 ==============
 Overview
 -----------
