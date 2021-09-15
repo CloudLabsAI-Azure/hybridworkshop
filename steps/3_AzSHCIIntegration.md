@@ -1,4 +1,4 @@
-Exercisee 1: Integrate Azure Stack HCI 20H2 with Azure
+Exercise 1: Integrate Azure Stack HCI 20H2 with Azure
 ==============
 Overview
 -----------
