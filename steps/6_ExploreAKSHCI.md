@@ -1,4 +1,4 @@
-Explore the AKS on Azure Stack HCI environment
+Exercise 3: Explore the AKS on Azure Stack HCI environment
 ==============
 Overview
 -----------
