@@ -63,7 +63,7 @@ In order to deploy AKS-HCI with Windows Admin Center, you need to connect your W
 
 10. Click on **Sign in** and when prompted for credentials, **enter your Azure credentials** and you will see a popup **Permissions requested**. Select **Consent on behalf of your organization** then click **Accept**.
 
-      ![Permissions for Windows Admin Center](/media/wac_azure_permissions.png "Permissions for Windows Admin Center")
+      ![Permissions for Windows Admin Center](media/ex2-task1-step10.png)
 
 *******************************************************************************************************
 
@@ -209,15 +209,15 @@ With the management cluster deployed successfully, you're ready to move on to de
     
      ![AKS on Azure Stack HCI management cluster deployment started in Windows Admin Center](/media/addcluster.png "AKS on Azure Stack HCI management cluster deployment started in Windows Admin Center")
      
-3. Firstly, review the prerequisites - your Azure VM environment will meet all the prerequisites, so you should be fine to click **Next: Basics**
+2. Firstly, review the prerequisites - your Azure VM environment will meet all the prerequisites, so you should be fine to click **Next: Basics**
 
     ![AKS on Azure Stack HCI management cluster deployment started in Windows Admin Center](/media/basic.png "AKS on Azure Stack HCI management cluster deployment started in Windows Admin Center")
 
-5. On the **Basics** page, firstly, choose whether you wish to **optionally** integrate with Azure Arc enabled Kubernetes. You can click the link on the page to learn more about Azure Arc. If you do wish to integrate, select the **Enabled** radio button, then use the drop downs to select the **subscription**, select  **HybridHost** resource group and  same region where your RG is deployed.
+3. On the **Basics** page, firstly, choose whether you wish to **optionally** integrate with Azure Arc enabled Kubernetes. You can click the link on the page to learn more about Azure Arc. If you do wish to integrate, select the **Enabled** radio button, then use the drop downs to select the **subscription**, select  **HybridHost** resource group and  same region where your RG is deployed.
 
     ![Enable Arc integration with Windows Admin Center](/media/basic1.png "Enable Arc integration with Windows Admin Center")
 
-3. Still on the **Basics** page, under **Cluster details** enter the following details,
+4. Still on the **Basics** page, under **Cluster details** enter the following details,
      
      *  **Password**: ```demo!pass123```
      *  **Kubernetes cluster name**: ```akshciclus001``` 
@@ -225,12 +225,12 @@ With the management cluster deployed successfully, you're ready to move on to de
 
     ![AKS cluster details in Windows Admin Center](/media/aks_basics_cluster_details_single1.png "AKS cluster details in Windows Admin Center")
 
-4. Under **Primary node pool**, accept the defaults, and then click **Next: Node pools**
+5. Under **Primary node pool**, accept the defaults, and then click **Next: Node pools**
 
     ![AKS primary node pool in Windows Admin Center](/media/basic3.png "AKS primary node pool in Windows Admin Center")
 
-5. On the **Node pools** page, click on **+Add node pool**
-6. In the **Add a node pool** blade, enter the following, then click **Add**
+6. On the **Node pools** page, click on **+Add node pool**
+7. In the **Add a node pool** blade, enter the following, then click **Add**
    1. **Node pool name**: LinuxPool1
    2. **OS type**: Linux
    3. **Node size**: Standard_K8S3_v1 (6 GB Memory, 4 CPU)
@@ -238,8 +238,8 @@ With the management cluster deployed successfully, you're ready to move on to de
 
    ![AKS node pools in Windows Admin Center](/media/pool.png "AKS node pools in Windows Admin Center")
 
-7. Once your **Node pools** have been defined, click **Next: Authentication**
-8. For this evaluation, for **AD Authentication** click **Disabled** and then click **Next: Networking**
+8. Once your **Node pools** have been defined, click **Next: Authentication**
+9. For this evaluation, for **AD Authentication** click **Disabled** and then click **Next: Networking**
 
     ![AKS virtual networking in Windows Admin Center](/media/ad.png "AKS virtual networking in Windows Admin Center")
 
@@ -247,7 +247,7 @@ With the management cluster deployed successfully, you're ready to move on to de
 
     ![AKS virtual networking in Windows Admin Center](/media/aks_virtual_networking.png "AKS virtual networking in Windows Admin Center")
 
-10. Click on the **aks-default-network**, ensure **Flannel** network configuration is selected, and then click **Next: Review + Create**
+11. Click on the **aks-default-network**, ensure **Flannel** network configuration is selected, and then click **Next: Review + Create**
 
      ![AKS virtual networking in Windows Admin Center](/media/network.png "AKS virtual networking in Windows Admin Center")
 
@@ -255,16 +255,16 @@ With the management cluster deployed successfully, you're ready to move on to de
 
      ![Finalize creation of AKS cluster in Windows Admin Center](/media/cresate.png "Finalize creation of AKS cluster in Windows Admin Center")
 
-12. The creation process will begin and can take upto 15 minutes to deploy.
+13. The creation process will begin and can take upto 15 minutes to deploy.
     > **Note**: Make sure to not switch to another tab otherwise the creation can be failed due to inactivity.
     
      ![Start deployment of AKS cluster in Windows Admin Center](/media/creating.png "Start deployment of AKS cluster in Windows Admin Center")
 
-13. Once completed, you should see a message for successful creation, then click **Finish**
+14. Once completed, you should see a message for successful creation, then click **Finish**
 
-     ![Completed deployment of AKS cluster in Windows Admin Center](https://github.com/mattmcspirit/hybridworkshop/blob/main/media/aks_create_complete.png "Completed deployment of AKS cluster in Windows Admin Center")
+     ![Completed deployment of AKS cluster in Windows Admin Center](media/ex2-task4-step14.png)
 
-14. Back in the **Azure Kubernetes Service on Azure Stack HCI landing page**, you should now see your cluster listed.
+15. Back in the **Azure Kubernetes Service on Azure Stack HCI landing page**, you should now see your cluster listed.
 
      ![AKS cluster in Windows Admin Center](/media/akscluster.png "AKS cluster in Windows Admin Center")
 

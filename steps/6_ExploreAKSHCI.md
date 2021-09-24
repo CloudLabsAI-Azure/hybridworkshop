@@ -97,7 +97,7 @@ In this example, using the [previously deployed simple Linux application](#deplo
 
     ![Virtual machine located in Azure](/media/vm.png "Virtual machine located in Azure")
 
-1. Once on the overview blade for your VM, **in the left-hand navigation**, click on **Networking**
+1. Once on the overview blade for your VM, **in the left-hand navigation**, click on **Networking** under Settings.
 
     ![Virtual machine located in Azure](/media/networking.png "Virtual machine located in Azure")
 
@@ -160,7 +160,7 @@ With the network security group rule configured, there are some additional steps
      ```
     ![Result of Add-NetNatStaticMapping](/media/Add-NetNatStaticMapping.png "Result of Add-NetNatStaticMapping")
 
-4. The NAT static mapping should be successfully created, and you can now test the accessibility of your application from outside of the Azure VM. You should try to access the web application using the **Azure VM Public IP** which you [noted down earlier](#add-an-inbound-rule-to-your-nsg).
+1. The NAT static mapping should be successfully created, and you can now test the accessibility of your application from outside of the Azure VM. You should try to access the web application using the **Azure VM Public IP** which you [noted down earlier](#add-an-inbound-rule-to-your-nsg).
 
     ![Access web application using Azure Public IP](/media/access_web_app.png "Access web application using Azure Public IP")
 
