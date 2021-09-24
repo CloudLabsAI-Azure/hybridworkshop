@@ -97,7 +97,7 @@ In this example, using the [previously deployed simple Linux application](#deplo
 
     ![Virtual machine located in Azure](/media/vm.png "Virtual machine located in Azure")
 
-1. Once on the overview blade for your VM, **in the left-hand navigation**, click on **Networking**
+1. Once on the overview blade for your VM, **in the left-hand navigation**, click on **Networking** under Settings.
 
     ![Virtual machine located in Azure](/media/networking.png "Virtual machine located in Azure")
 
@@ -160,13 +160,13 @@ With the network security group rule configured, there are some additional steps
      ```
     ![Result of Add-NetNatStaticMapping](/media/Add-NetNatStaticMapping.png "Result of Add-NetNatStaticMapping")
 
-4. The NAT static mapping should be successfully created, and you can now test the accessibility of your application from outside of the Azure VM. You should try to access the web application using the **Azure VM Public IP** which you [noted down earlier](#add-an-inbound-rule-to-your-nsg).
+1. The NAT static mapping should be successfully created, and you can now test the accessibility of your application from outside of the Azure VM. You should try to access the web application using the **Azure VM Public IP** which you [noted down earlier](#add-an-inbound-rule-to-your-nsg).
 
     ![Access web application using Azure Public IP](/media/access_web_app.png "Access web application using Azure Public IP")
 
 **NOTE** - This process creates a NAT static mapping that's specific to that External IP and Port of that specific Kubernetes service you have deployed in the environment. You will need to repeat the process for additional applications. To learn more about PowerShell NetNat commands, [visit the official documentation](https://docs.microsoft.com/en-us/powershell/module/netnat "Official documentation for NetNat").
 
-6. Now run the below command to start the Windows Admin center service as we will be working on Admin center in next exercise.
+1. Now run the below command to start the Windows Admin center service as we will be working on Admin center in next exercise.
 
     ```powershell 
     Start-Service -Name "ServerManagementGateway"
