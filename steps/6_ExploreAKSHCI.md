@@ -166,7 +166,7 @@ With the network security group rule configured, there are some additional steps
 
 **NOTE** - This process creates a NAT static mapping that's specific to that External IP and Port of that specific Kubernetes service you have deployed in the environment. You will need to repeat the process for additional applications. To learn more about PowerShell NetNat commands, [visit the official documentation](https://docs.microsoft.com/en-us/powershell/module/netnat "Official documentation for NetNat").
 
-1. Now run the below command to start the Windows Admin center service as we will be working on Admin center in next exercise.
+6. Now run the below command to start the Windows Admin center service as we will be working on Admin center in next exercise.
 
     ```powershell 
     Start-Service -Name "ServerManagementGateway"
